@@ -14,5 +14,11 @@ return {
     lazy = false,
     priority = 1000,
     opts = {},
+  },
+  {
+    "nvim-telescope/telescope.nvim",
+    opts = {
+      file_ignore_patterns = { "node_modules" },
+    },
   }
 }
