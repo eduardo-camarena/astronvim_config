@@ -17,8 +17,24 @@ return {
   },
   {
     "nvim-telescope/telescope.nvim",
-    opts = {
-      file_ignore_patterns = { "node_modules" },
+    config = require("telescope").setup({
+      defaults = {
+        file_ignore_patterns = { "node_modules", "target" },
+      },
+    }),
+  },
+  lsp = {
+    config = {
+      rust_analyzer = {
+        settings = {
+          ["rust-analyzer"] = {
+            cargo = {
+              extraEnv = { CARGO_PROFILE_RUST_ANALYZER_INHERITS = 'dev', },
+              extraArgs = { "--profile", "rust-analyzer", },
+            },
+          },
+        },
+      },
     },
   }
 }
