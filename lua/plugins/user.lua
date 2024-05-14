@@ -82,4 +82,12 @@ return {
       )
     end,
   },
+  {
+    "nvim-telescope/telescope.nvim",
+    configs = require("telescope").setup({
+      defaults = {
+        file_ignore_patterns = { "node_modules", "target" },
+      },
+    }),
+  }
 }
