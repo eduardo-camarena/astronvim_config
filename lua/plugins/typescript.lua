@@ -16,6 +16,9 @@ return {
         prettier = {
           root_dir = require("lspconfig.util").root_pattern(".prettierrc.json", ".prettierrc.js"),
         },
+        biome = {
+          root_dir = require("lspconfig.util").root_pattern "biome.json",
+        },
       },
     })
   end,
